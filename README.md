@@ -1,7 +1,7 @@
 # FZU-Master-Thesis
 福州大学硕士研究生毕业论文LaTex模板
 
-# 致谢
+# 说明
 本项目为福州大学硕士研究生毕业论文模板，博士研究生毕业论文模板请参考[FZUThesis](https://github.com/chenzl23/FZUThesis)，修改后也可用于福州大学本科毕业论文撰写。
 
 # 使用
