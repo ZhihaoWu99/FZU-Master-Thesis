@@ -1,0 +1,207 @@
+% 选择模板（Master：硕士，engmaster：工程硕士，promaster：专业硕士）
+\documentclass[engmaster]{thesis}
+
+% 定义本论文相关元信息
+\def\thesisChineseBookName{中文论文名}
+\def\thesisEnglishBookName{English Thesis Book Name}
+
+% 生成中英文论文名
+\title{\thesisChineseBookName}{\thesisEnglishBookName}
+
+\SetKwInOut{KIN}{输入}
+\SetKwInOut{KOUT}{输出}
+
+
+
+
+
+\begin{document}
+% 插入封面
+\thesisTitlePage
+
+% 插入声明页
+% \thesisDeclarationPage
+
+% 中文摘要及关键词
+\begin{chineseAbstract}
+  中文摘要。
+
+\chinesekeyword{中文关键词1；中文关键词2；中文关键词3}
+\end{chineseAbstract}
+
+% 英文摘要及关键词
+\begin{englishAbstract}
+  English abastract.
+
+\englishkeyword{English keyword 1; English keyword 2; English keyword 3}
+\end{englishAbstract}
+
+%% 目录
+\thesisContents
+
+%% 主要符号对照表
+\begin{thesisMainSymbol}
+    $\mathbb{R}^d$         & $d$维Euclidean空间        \\
+    $n$                    & 输入样本个数               \\
+    $\mathbf{X}$           & 输入特征矩阵               \\
+    $\mathbf{x}_i$         & 第$i$个样本的特征向量      \\
+\end{thesisMainSymbol}
+
+%% 缩略词表
+\begin{thesisAcronyms}
+    CNNs & Convolutional Neural Networks         & 卷积神经网络    \\
+\end{thesisAcronyms}
+
+
+
+\chapter{绪论}
+\label{chapter_introduction}
+\renewcommand{\headrulewidth}{0.4pt} % 在目录、符号表、缩略词表中去掉页眉下划线，这边需要恢复
+% 图片用\ref{XXX}引用
+% \begin{figure}[!t]
+%     \centering
+%     \includegraphics[width=16.5cm]{XXX.pdf}
+%     \caption{XXXXXX}
+%     \label{chapter_sgae_fig_overview}
+% \end{figure}
+
+\section{研究背景与意义}
+研究意义\citing{roweis2000nonlinear}。
+
+\section{国内外研究现状}
+国内外研究现状。
+
+\subsection{现状1}
+内容。
+
+\subsubsection{现状1.1}
+内容。
+
+\section{本文研究内容与贡献}
+本文研究内容与贡献。
+
+\textbf{1. 研究内容1}
+
+
+\textbf{2. 研究内容2}
+
+
+
+\section{本文组织结构}
+
+
+\chapter{研究内容1}
+研究内容。
+
+\section{引言}
+
+
+\section{算法框架}
+\begin{algorithm}[!t]
+    \caption{\textbf{XXXXX网络}}
+    \KIN{输入}
+    \KOUT{输出}% 输出
+    算法
+    \textbf{返回} $\mathcal{C}$
+\end{algorithm}
+
+
+
+\section{实验与分析}
+\begin{table}[!t]
+  \centering
+  \caption{实验数据集统计信息}
+  \begin{tabular}{*{5}{c}}
+      \toprule
+          数据集      & \#样本     & \#特征     & \#类别      & 数据类型 \\
+      \midrule
+          COIL20      & 1,440     & 1,024      & 20        & Object image \\
+          COIL100     & 7,200     & 1,024      & 100       & Object image \\
+      \bottomrule
+  \end{tabular}
+  \label{chapter_sgae_tab_datasets}
+\end{table}
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=16.5cm]{./figs/fig_data_visualization.pdf}\\
+    \caption{部分实验图像数据集实例展示}
+    \label{chapter_sgae_data_visualization}
+\end{figure}
+
+
+
+% 由于结论章节不能出现序号，这边重新定义一个命令
+\thesisChapterConclusion
+\chapter{~~~~~}
+\section{全文总结}
+全文总结。
+
+
+\section{后续工作展望}
+后续工作展望。
+
+
+% 参考文献                                    
+\thesisbibliography{reference}
+
+
+% 致谢
+\begin{thesisAcknowledgement}
+  致谢。
+\end{thesisAcknowledgement}
+
+
+% 附录
+\thesisappendix
+\chapter{说明}
+附录是对于一些不宜放在正文中，但有参考价值的内容，可以包括正文内不便列出的冗长公式推导，以备他人阅读方便所需的辅助性数学工具或表格，重复性数据图表，计算程序及说明。（如果没有附录可删除此章） 
+\section{测试}
+
+
+% 简历
+\begin{thesisResume}
+    \begin{description}[labelsep=0pt, leftmargin=*]
+        \item 姓\hspace{24pt}名：XXX
+        \item 性\hspace{24pt}别：X
+        \item 出生年月：XXXX年XX月
+        \item 籍\hspace{24pt}贯：XX省XX市
+    \end{description}
+
+    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 学习经历}
+    \begin{description}[labelsep=0pt, leftmargin=*]
+        \item 学士：计算机科学与技术，福州大学，2017.09-2021.06
+    \end{description}
+
+    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 获奖情况}
+    \begin{description}[labelsep=0pt, leftmargin=*]
+        \item 2024年获XXX
+    \end{description}
+\end{thesisResume}
+
+
+% 在学期间的研究成果及发表的学术论文
+\begin{thesisAccomplish}
+    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 在读期间已发表和录用的论文：} 
+    \hspace{-26pt} 第一作者（1篇）
+    \begin{enumerate}[labelindent=0pt, leftmargin=*]
+        \item ABC[J]. ABC, 2077.
+    \end{enumerate}
+    第二作者（1篇）
+    \begin{enumerate}[labelindent=0pt, leftmargin=*]
+        \item ABC[C]//ABC, 2077, 77(7): 7777-7777.
+    \end{enumerate}
+
+    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 参与的科研项目及成果：} 
+    \begin{enumerate}[labelindent=0pt, leftmargin=*]
+        \item 国家自然科学基金面上项目，ABC(12345678)，2077.01-2080.12，参与
+        \item 福建省自然科学基金面上项目，ABC(2077J12345678)，2077.01-2080.12，参与
+    \end{enumerate}
+
+    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 在学期间获得的奖项：} 
+    \begin{enumerate}[labelindent=0pt, leftmargin=*]
+        \item ABC大赛一等奖
+    \end{enumerate}
+\end{thesisAccomplish}
+
+
+\end{document}
